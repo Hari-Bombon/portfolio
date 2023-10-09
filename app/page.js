@@ -2,9 +2,7 @@
 
 export default function Home() {
   return(
- <main className='flex min-h-screen'>
-  <h1>Portfolio </h1>
-
+ <main className ='flex min-h-screen flex-col bg-[#121212]'>
     </main>
   );
 }
