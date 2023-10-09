@@ -12,6 +12,7 @@ const HeroSection = () => {
         Currently pursuing B.E CSE
         </p>
         </div>
+        <div className='col-span-5'></div>
         </div>
     </section>
   );
