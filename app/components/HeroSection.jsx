@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const HeroSection = () => {
   return (
     <section>
@@ -12,7 +13,16 @@ const HeroSection = () => {
         Im a bd, fd
         </p>
         </div>
-        <div className='col-span-5'></div>
+        <div className='col-span-5'>
+          <div className='rounded-full bg-[#181818] '>
+          <image
+          src="./images/profile.jpeg"
+          alt="hero-image"
+          width={300}
+          height={500}
+        />
+        </div>
+        </div>
         </div>
     </section>
   );
