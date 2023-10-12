@@ -1,9 +1,7 @@
+"use client"
+
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-
-
-   
-
 
 const HeroSection = () => {
   return (
@@ -21,14 +19,13 @@ const HeroSection = () => {
         1000, // wait 1s before replacing "Mice" with "Hamsters"
         'Web developer',
         1000,
-        'Ethereum developer',
-        1000,
         'Front-end developer',
+        1000,
+        'Ethereum developer',
         1000
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '2em', display: 'inline-block' }}
       repeat={Infinity}
     />
         
