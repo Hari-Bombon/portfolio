@@ -8,9 +8,19 @@ const Navbar = () => {
             <Link href={'/'} className="text-5xl text-white font-semibold">
                 HP
                 </Link>
-            <div className='menu'></div>
+                <div className='menu-hidden md:block md:w-auto' id='navbar'>
+                  <ul>
+                    <li>
+                      <Link href={"#about"} className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'>
+                        About
+                      </Link>
+                    </li>
+                  </ul>
+           
         </div>
-        </div></nav>
+        </div>
+        </div>
+        </nav>
   )
 }
 
