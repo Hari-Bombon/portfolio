@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import Image from 'next/image'
+import profile from '../image/profile.jpeg'
 
 const HeroSection = () => {
   return (
@@ -42,15 +44,15 @@ const HeroSection = () => {
         </div>
         <div className='col-span-5 place-self-center mt-4 ;g'>
           <div className='rounded-full bg-[#181818] w-[250px] h-[250]'>
-          <image
-          src="./images/profile.jpeg"
-          alt="hero-image"
-          width={300}
-          height={500}
-        />
+          <Image
+            src={profile.jpeg}
+            alt="profile"
+            width="350px"
+            height="300px"
+    />
         </div>
         </div>
-        </div>
+    </div>
     </section>
   );
 };
