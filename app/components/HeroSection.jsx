@@ -45,10 +45,10 @@ const HeroSection = () => {
         <div className='col-span-5 place-self-center mt-4 ;g'>
           <div className='rounded-full bg-[#181818] w-[250px] h-[250]'>
           <Image
-            src={profile.jpeg}
+            src={profile}
             alt="profile"
             width="350px"
-            height="300px"
+            height="500px"
     />
         </div>
         </div>
