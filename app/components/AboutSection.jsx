@@ -2,7 +2,43 @@
 import React, { useTransition , useState}from 'react'
 import TabButton from './TabButton'
 
+const TAB_DATA = [
+  {
+    title:"Skills",
+    id:"skills",
+    content:(
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Javascript</li>
+        <li>React</li>
+        <li>Solidity</li>
+        <li>Etherjs</li>
+      </ul>
+    )
+  },
+  {
+    title: "Education",
+    id:"education",
+    content:(
+      <ul>
+        <li>B.E Computer Science and Engineering</li>
+        <li>Jaya Engineering College</li>
+      </ul>
+    )
+  },
 
+  {
+    title: "Certifications",
+    id:"certifications",
+    content:(
+      <ul>
+        <li>AWS Cloud Practitioner</li>
+        <li>Google Professional Cloud Developer</li>
+      </ul>
+    )
+  }
+]
 const AboutSection = () => {
   const [tab , setTab] = useState("skills")
   const [isPending ,startTransition ] = useTransition()
