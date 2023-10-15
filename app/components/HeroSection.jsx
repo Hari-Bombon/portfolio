@@ -47,8 +47,8 @@ const HeroSection = () => {
           <Image
             src={profile}
             alt="profile"
-            width="350px"
-            height="500px"
+            width="250px"
+            height="350px"
     />
         </div>
         </div>
