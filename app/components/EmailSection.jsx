@@ -1,4 +1,9 @@
 import React from 'react'
+import GithubIcon from '../../../public/github.png'
+import twitterIcon from '../../../public/twitter.png'
+import LinkedinIcon from '../../../public/linkedin.png'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const EmailSection = () => {
   return (
@@ -10,7 +15,11 @@ const EmailSection = () => {
             I am Currently looking for new opportunities, my inbox is always open, 
             Whether you have a question or just want to say hi , I will try my best to get back to you!
         </p>
-        <div className='socials flex flex-row gap-2'></div>
+        <div className='socials flex flex-row gap-2'>
+            <Link href="github.com">
+                <Image src ={/>
+            </Link>
+        </div>
         </div>
         </section>
   );
