@@ -7,7 +7,7 @@ const TAB_DATA = [
     title:"Skills",
     id:"skills",
     content:(
-      <ul>
+      <ul className='list-disc pl-2'>
         <li>HTML5</li>
         <li>CSS3</li>
         <li>Javascript</li>
@@ -51,7 +51,7 @@ const AboutSection = () => {
   return (
     <section className='text-white'>
       <div className='md:grid md:grid-cols gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
-
+      <div className='mt-4 md:mt-0 text-left flex flex-col- h-full'></div>
       <div>
         <h2 className=' text-white mb-4 sm:text-5xl lg:text-4xl font-extrabold'> 
         <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400'> 
@@ -61,7 +61,7 @@ const AboutSection = () => {
            I have experience working with Html , css , javascript , react , solidity and NFT . 
            I am a quick learner and team player . I am excited to learn and work with others to create amazing applications
            </p>
-           <div className='flex flex-row mt-8'>
+           <div className='flex flex-row justify-start mt-8'>
             <TabButton 
             selectTab={() => handleTabChange("skills")} 
             active={tab === "skills"}
@@ -85,8 +85,9 @@ const AboutSection = () => {
               {""}
               certifications{""}
             </TabButton>
-           </div>
-      </div>
+          </div>
+          <div className='mt-8'>{TAB_DATA.find((t) => t.id === tab).content}</div>
+        </div>
       </div>
       </section>
   )
