@@ -1,12 +1,13 @@
 "use client"
 import React, { useTransition , useState}from 'react'
+import TabButton from './TabButton'
 
 
 const AboutSection = () => {
   const [tab , setTab] = useState("skills")
-  const [startTransition , isPending] = useTransition()
+  const [isPending ,startTransition ] = useTransition()
 
-  const handleChange = (id) => {
+  const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id);
     })
@@ -25,9 +26,29 @@ const AboutSection = () => {
            I am a quick learner and team player . I am excited to learn and work with others to create amazing applications
            </p>
            <div className='flex flex-row mt-8'>
-            <span className='mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500'>Skills</span>
-            <span>Education</span>
-            <span>Experience</span>
+            <TabButton 
+            selectTab={() => handleTabChange("skills")} 
+            active={tab === "skills"}
+            >
+              {""}
+              Skills{""}
+            </TabButton>
+
+            <TabButton 
+            selectTab={() => handleTabChange("education")} 
+            active={tab === "education"}
+            >
+              {""}
+              Education{""}
+            </TabButton>
+
+            <TabButton 
+            selectTab={() => handleTabChange("certifications")} 
+            active={tab === "certifications"}
+            >
+              {""}
+              certifications{""}
+            </TabButton>
            </div>
       </div>
       </div>
