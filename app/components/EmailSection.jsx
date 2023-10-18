@@ -31,7 +31,9 @@ const EmailSection = () => {
 
         const response = await fetch(endpoint, options);
         const resData = await response.json();
-        if(resData.status === 'success'){
+        console.log(resData)
+        
+        if(response.status === 200){
             console.log('Message.sent.');
         }
     }
@@ -65,6 +67,7 @@ const EmailSection = () => {
                 Your Email
             </label>
             <input
+                name='email'
                 type='email'
                 id='email'
                 required
@@ -78,6 +81,7 @@ const EmailSection = () => {
                Subject
             </label>
             <input
+                name='subject'
                 type='text'
                 id='subject'
                 required
