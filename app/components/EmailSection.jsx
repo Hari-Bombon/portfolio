@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react'
 import GithubIcon from '../image/socials/github.png'
 import twitterIcon from '../image/socials/twitter.png'
@@ -28,6 +28,12 @@ const EmailSection = () => {
             //body of the request is the json data we created above
             body:JSONdata,
         }
+
+        const response = await fetch(endpoint, options);
+        const resData = await response.json();
+        if(resData.status === 'success'){
+            console.log('Message.sent.');
+        }
     }
   return (
     <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
@@ -52,7 +58,7 @@ const EmailSection = () => {
                 <Image src ={twitterIcon} alt="Twitter Icon"/>
             </Link>
         </div>
-        <form className='flex flex-col'>
+        <form className='flex flex-col onSubmit={handleSubmit}'>
             <div className='mb-6'>
             <label
             htmlFor='email' className='text-white block text-sm mb-2 font-medium'>
