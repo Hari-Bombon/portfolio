@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React,{useState} from 'react'
 import GithubIcon from '../image/socials/github.png'
 import twitterIcon from '../image/socials/twitter.png'
 import LinkedinIcon from '../image/socials/linkedin.png'
@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const EmailSection = () => {
+    const [emailSubmitted, setEmailSubmitted] = useState('false');
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -31,10 +32,11 @@ const EmailSection = () => {
 
         const response = await fetch(endpoint, options);
         const resData = await response.json();
-        console.log(resData)
+
         
         if(response.status === 200){
             console.log('Message.sent.');
+            setEmailSubmitted(true);
         }
     }
   return (
@@ -107,6 +109,14 @@ const EmailSection = () => {
                 className='bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full'>
                     Send Message
                 </button>
+                {
+                    //if the email was submiited successfully, show a si=uccess message
+                    emailSubmitted && (
+                        <p className='textx-green-500 text-sm mt-2'>
+                            Email sent successfully
+                        </p>
+                    )
+                }
         </form>
         </div>
         </section>
