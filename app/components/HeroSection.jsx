@@ -4,12 +4,16 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image'
 import profile from '../image/profile.jpeg'
-import {motion} from "framer-motion "
+import {motion} from "framer-motion"
 const HeroSection = () => {
   return (
     <section>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
-        <motion.div initial={{opacity:0}} animate={{ opacity: 1}}className='col-span-7 place-self-center text-center sm:text-left'>
+        <motion.div 
+        initial={{opacity:0 }}
+        animate={{ opacity: 1, scale: 1}}
+        transition={{ duration: 0.5}}
+        className='col-span-7 place-self-center text-center sm:text-left'>
       <h1 className='text-white mb-4 sm:text-5xl lg:text-4xl font-extrabold'>
        <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400'> 
        Hello! I am {""}
