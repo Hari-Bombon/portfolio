@@ -2,6 +2,7 @@
 import React, { useTransition , useState}from 'react'
 import TabButton from './TabButton'
 
+
 const TAB_DATA = [
   {
     title:"Skills",
@@ -15,7 +16,7 @@ const TAB_DATA = [
         <li>Solidity</li>
         <li>Etherjs</li>
       </ul>
-    )
+    ),
   },
   {
     title: "Education",
@@ -25,7 +26,7 @@ const TAB_DATA = [
         <li>B.E Computer Science and Engineering</li>
         <li>Jaya Engineering College</li>
       </ul>
-    )
+    ),
   },
 
   {
@@ -46,10 +47,10 @@ const AboutSection = () => {
   const handleTabChange = (id) => {
     startTransition(() => {
       setTab(id);
-    })
-  }
+    });
+  };
   return (
-    <section className='text-white'>
+    <section className='text-white' id="about">
       <div className='md:grid md:grid-cols gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
       <div className='mt-4 md:mt-0 text-left flex flex-col- h-full'></div>
       <div>
