@@ -1,10 +1,9 @@
 
 "use client"
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
-import {motion } from "framer-motion"
 
 
 
@@ -65,7 +64,7 @@ const ProjectData = [
     id:6,
     title: "Farm Tech",
     description:"Farmtech is a tool designed to assist the farming community in Tamil Nadu in optimizing crop production. Given the increasing global demand for food, there is a pressing need to address the imbalance in food supply",
-    images:"",
+    images:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLDoUkHHMGXAhMwYOrqgBamD1Zq4mJVuwtjX8kFZ0O81LxzQClR3K9Cj8jqw6hg5zhsrY&usqp=CAU",
     tag:["All", "Web"],
     gitUrl:"https://github.com/Hari-Bombon/FarmTech",
     previewUrl:"",
@@ -129,7 +128,7 @@ const ProjectSection =() =>{
               key={project.id}
               title={project.title}
               description={project.description}
-              imgUrl={project.image}
+              imgUrl={project.images}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
